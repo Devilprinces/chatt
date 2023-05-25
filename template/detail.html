@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+   
+    <center>
+  
+
+    <table>
+        
+        
+        <tr>
+            <th><h1> name</h1></th>
+            <th><h1>how you know </h1></th>
+            <th><h1> who is sathish </h1></th>
+             <th><h1> what you like </h1></th>
+            <th><h1> question</h1></th> 
+            <th><h1>del</h1></th>
+        </tr>
+        {% for det in detail %}
+        
+        <tr>
+        <td> <p>{{ det.q1}} </p></td>
+        <td><p> {{ det.q2}}</p></td>
+        <td><p>{{ det.q3}} </p></td>
+        <td><P>{{ det.q4}}</P></td>
+        <td><P> {{ det.q5}}</P></td>
+        <td><p><a class="btn btn-outline-danger" href="/delete/{{det.id}}">Delete</a></p></td>
+        {% endfor %}
+    </tr>
+    </table>
+</center>
+    
+    <style>
+
+        table,th,td{
+            
+            border-collapse:collapse ;
+            padding: 2px;
+            text-align: center;
+        }
+        h1{
+            font-size: 30px;
+            padding: 30px;
+        }
+        @media (max-width:600px)
+        {
+            table,th,td{
+            text-align: center;
+        }
+            table{
+                width:300px;
+                height: auto;
+                font-size: 10px;
+            }
+            h1{
+                font-size: 10px;
+                padding: 3px;
+            }
+            th{
+                font-size: 20px;
+            }
+        }
+    </style>
+</body>
+</html>
